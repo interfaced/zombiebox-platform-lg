@@ -1,0 +1,14 @@
+{
+  "name": "zombiebox-platform-lg",
+  "version": "0.3.0",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/interfaced/zombiebox-platform-lg/issues"
+  },
+  "homepage": "https://github.com/interfaced/zombiebox-platform-lg",
+  "files": [
+    "externs/",
+    "lib/",
+    "index.js"
+  ]
+}
