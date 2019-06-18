@@ -1,143 +1,121 @@
-/*
- * This file is part of the ZombieBox package.
- *
- * Copyright (c) 2011-2016, Interfaced
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-
-
-
 /**
- * @extends {HTMLElement}
  */
-class LGInfoPlugin {
+class LGInfoPlugin extends HTMLElement {
+	/**
+	 */
 	constructor() {
+		super();
+
 		/**
 		 * @type {string}
 		 */
 		this.version;
-
 
 		/**
 		 * @type {string}
 		 */
 		this.manufacturer;
 
-
 		/**
 		 * @type {string}
 		 */
 		this.modelName;
-
 
 		/**
 		 * @type {string}
 		 */
 		this.serialNumber;
 
-
 		/**
 		 * @type {string}
 		 */
 		this.swVersion;
-
 
 		/**
 		 * @type {string}
 		 */
 		this.hwVersion;
 
-
 		/**
 		 * @type {string}
 		 */
 		this.osdResolution;
-
 
 		/**
 		 * @type {string}
 		 */
 		this.networkType;
 
-
 		/**
 		 * @type {string}
 		 */
 		this.net_macAddress;
-
 
 		/**
 		 * @type {string}
 		 */
 		this.drmClientInfo;
 
-
 		/**
 		 * @type {string}
 		 */
 		this.net_dhcp;
-
 
 		/**
 		 * @type {string}
 		 */
 		this.net_isConnected;
 
-
 		/**
 		 * @type {string}
 		 */
 		this.net_hasIP;
-
 
 		/**
 		 * @type {string}
 		 */
 		this.net_ipAddress;
 
-
 		/**
 		 * @type {string}
 		 */
 		this.net_netmask;
-
 
 		/**
 		 * @type {string}
 		 */
 		this.net_gateway;
 
-
 		/**
 		 * @type {string}
 		 */
 		this.net_dns1;
-
 
 		/**
 		 * @type {string}
 		 */
 		this.net_dns2;
 
-
 		/**
 		 * @type {boolean}
 		 */
 		this.supportMouse;
-
 
 		/**
 		 * @type {string}
 		 */
 		this.support3D;
 
-
 		/**
 		 * @type {string}
 		 */
 		this.supportPortalKey;
+
+		/**
+		 * Format: ISO 639-1
+		 * @type {string}
+		 */
+		this.tvLanguage2;
 
 
 		/**

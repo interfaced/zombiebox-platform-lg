@@ -1,11 +1,12 @@
-`zombiebox-platform-lg` is [LG NetCast](http://developer.lge.com/resource/tv/RetrieveOverview.dev) Smart TV support abstraction layer for [Zombiebox](http://zombiebox.tv) framework.
+# zombiebox-platform-lg 
+[LG NetCast](http://webostv.developer.lge.com/discover/netcast/overview) Smart TV support abstraction layer for [ZombieBox](http://zombiebox.tv) framework.
 
-For LG webOS platform see `zombiebox-platform-webos`.
+For newer LG webOS platform see [`zombiebox-platform-webos`](https://github.com/interfaced/zombiebox-platform-webos).
 
-Additional information about ZombieBox platforms you can find in [documentation](http://zombiebox.tv/doc.html#section-4-2).
+## Installation
 
-### Installation
-From zombiebox project root run:
+From ZombieBox project root run:
+
 ```bash
 npm i --save zombiebox-platform-lg
 ```

@@ -1,3 +1,44 @@
+# 2.0.0 (18.06.2019)
+Compatibility update to ZombieBox 2.0 
+
+# 2.0.0-alpha.2 (21.03.2019)
+
+## Fixes
+* Updated zb-platform-test to 2.0
+* Migrated from deleted ZombieBox APIs
+
+# 2.0.0-alpha.1 (13.02.2019)
+
+Platform code migrated to ECMAScript modules.
+
+# 1.0.0 (31.01.2019)
+
+## Fixes
+* **#6336** Workaround for `document.implementation.createHTMLDocument` crash on 4.0 and 4.5
+* **#6294** Fix application freeze cause by mouse navigation
+
+## Features
+* Integrated platform testing suite
+* **#6337** Added `Device.isLH57` methog
+
+# v0.5.0 (26.01.2018)
+
+## Features
+* **#6167** Throw error `zb.device.errors.UnsupportedFeature` for unsupported platform feature. **[BREAKING]**
+
+# v0.4.0 (23.05.2017)
+
+## Features
+* **#6062** Implemented getters for launch params and environment.
+* **#6084** Implemented getting locale. See `Info#locale`.
+* **#6141** Removed method `Device#setTextSelectionEnabled.` **[BREAKING]**
+* Added blacklist to externs.
+
+# v0.3.1 (07.03.2017)
+
+## Fixes
+* **#5999** Fix aspect-ratio namespace
+
 # v0.3.0 (09.12.2016)
 
 ## Features

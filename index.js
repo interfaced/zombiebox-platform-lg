@@ -1,18 +1,18 @@
 /*
  * This file is part of the ZombieBox package.
  *
- * Copyright (c) 2011-2016, Interfaced
+ * Copyright © 2014-2016, Interfaced
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-var path = require('path');
+const path = require('path');
+const {AbstractPlatform} = require('zombiebox');
 
 
 /**
- * @implements {ZBPlatform}
  */
-class PlatformLG {
+class PlatformLG extends AbstractPlatform {
 	/**
 	 * @override
 	 */
@@ -23,7 +23,7 @@ class PlatformLG {
 	/**
 	 * @override
 	 */
-	getPublicDir() {
+	getSourcesDir() {
 		return path.join(__dirname, 'lib');
 	}
 
@@ -32,30 +32,36 @@ class PlatformLG {
 	 */
 	getConfig() {
 		return {
-			'compilation': {
-				'externs': [
+			include: [{
+				name: 'LG',
+				externs: [
 					path.join(__dirname, 'externs', 'globals.js'),
 					path.join(__dirname, 'externs', 'info-plugin.js'),
 					path.join(__dirname, 'externs', 'media-info.js'),
-					path.join(__dirname, 'externs', 'video-object.js')
+					path.join(__dirname, 'externs', 'video-object.js'),
+					path.join(__dirname, 'externs', 'blacklist.js')
 				]
-			},
-			scripts: []
+			}]
 		};
 	}
 
 	/**
 	 * @override
 	 */
-	buildApp(zbApp, distDir) {
-		var buildHelper = zbApp.getBuildHelper();
+	buildCLI(yargs, application) {
+		super.buildCLI(yargs, application);
+	}
 
-		return buildHelper.writeIndexHtml(path.join(distDir, 'index.html'), this.getName())
-			.then((warnings) => {
-				buildHelper.copyCustomWebFiles(distDir);
+	/**
+	 * @override
+	 */
+	async buildApp(application, distDir) {
+		const buildHelper = application.getBuildHelper();
 
-				return warnings;
-			});
+		const warnings = await buildHelper.writeIndexHTML(path.join(distDir, 'index.html'));
+		await buildHelper.copyStaticFiles(distDir);
+
+		return warnings;
 	}
 }
 

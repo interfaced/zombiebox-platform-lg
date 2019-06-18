@@ -1,13 +1,3 @@
-/*
- * This file is part of the ZombieBox package.
- *
- * Copyright (c) 2011-2016, Interfaced
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-
-
 /**
  * Source:
  * http://developer.lgappstv.com/TV_HELP/index.jsp?topic=%2Flge.tvsdk.developing.book%2Fhtml%2FAPI%2FAPI%2FMethods.htm
@@ -71,9 +61,13 @@ function NetCastSetPageLoadingIcon(control) {}
  * If the application is launched again after exiting, the API will be enabled again.
  *
  * Parameters:
- * original: view original video image with original correct aspect ratio (TV screen may not be filled with video image)
- * zoom: fill the full TV screen with original aspect ratio video(there may be some cropping of the original video image)
- * full: fill the full TV screen with video (aspect ratio may be distorted, but with no loss of original video image)
+ * original: view original video image with original correct aspect ratio
+ *      (TV screen may not befilled with video image)
+ * zoom: fill the full TV screen with original aspect ratio video
+ *      (there may be some cropping of the original video image)
+ * full: fill the full TV screen with video
+ *      (aspect ratio may be distorted, but with no loss of original video image)
+ *
  * @param {string} control 'original' or 'zoom' or 'full'
  */
 function NetCastSetDefaultAspectRatio(control) {}

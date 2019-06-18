@@ -1,14 +1,50 @@
 {
   "name": "zombiebox-platform-lg",
-  "version": "0.3.0",
+  "description": "LG NetCast Smart TV support abstraction layer for ZombieBox framework.",
+  "version": "2.0.0",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/interfaced/zombiebox-platform-lg/issues"
-  },
+  "author": "Interfaced (http://interfaced.tv)",
   "homepage": "https://github.com/interfaced/zombiebox-platform-lg",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:interfaced/zombiebox-platform-lg.git"
+  },
+  "keywords": [
+    "zombiebox",
+    "zombiebox-platform",
+    "lg",
+    "smart-tv",
+    "tv"
+  ],
+  "module": "./lib",
   "files": [
     "externs/",
     "lib/",
+    "CHANGELOG.md",
+    "LICENSE",
+    "MIGRATION.md",
+    "README.md",
     "index.js"
-  ]
+  ],
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
+  "scripts": {
+    "test": "npm run lint",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-interfaced": "^1.5.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-goog": "^1.0.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-interfaced": "^1.6.1",
+    "eslint-plugin-node": "^9.1.0",
+    "zombiebox": "^2.0.1"
+  },
+  "peerDependencies": {
+    "zombiebox": "^2.0.1"
+  }
 }
