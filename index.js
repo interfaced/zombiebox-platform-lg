@@ -1,7 +1,7 @@
 /*
  * This file is part of the ZombieBox package.
  *
- * Copyright © 2014-2016, Interfaced
+ * Copyright © 2014-2020, Interfaced
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -55,13 +55,8 @@ class PlatformLG extends AbstractPlatform {
 	/**
 	 * @override
 	 */
-	async buildApp(application, distDir) {
-		const buildHelper = application.getBuildHelper();
-
-		const warnings = await buildHelper.writeIndexHTML(path.join(distDir, 'index.html'));
-		await buildHelper.copyStaticFiles(distDir);
-
-		return warnings;
+	async pack(application, distDir) {
+		// Do nothing, index.html is good enough
 	}
 }
 

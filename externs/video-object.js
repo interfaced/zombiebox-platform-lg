@@ -102,9 +102,9 @@ class LGVideoObject extends HTMLElement {
 	}
 
 	/**
-	 * @param {number=} opt_speed The range of allowed values of speed is from -30.0 to 30.0
+	 * @param {number=} speed The range of allowed values of speed is from -30.0 to 30.0
 	 */
-	play(opt_speed) {}
+	play(speed) {}
 
 	/**
 	 *

@@ -1,3 +1,6 @@
+# 2.1.0 (09.07.2020)
+Compatibility update to ZombieBox 2.7
+
 # 2.0.0 (18.06.2019)
 Compatibility update to ZombieBox 2.0 
 
